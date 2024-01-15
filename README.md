@@ -18,13 +18,18 @@ Este proyecto es el segundo trabajo (01/2024) del Bootcamp Full Stack Fem Coders
 
 El proyecto está en fase de desarrollo.
 
+## Tecnologías Utilizadas
+
+- HTML
+- CSS
+- JavaScript
+
 ## Acceso al Proyecto
 
 Para obtener una copia local del proyecto, siga estos pasos:
 
 1. Clona el repositorio: git clone `https://github.com/angylearns/adminlistas_g4.git`
 2. Navega hasta el directorio del proyecto: `cd adminlistas_g4`
-
 
 ## Desarrolladoras del Proyecto
 
