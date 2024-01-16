@@ -1,4 +1,109 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.indexBody {
     background-image: url("/img/patio-de-escuela-tecnologica-upscaled.jpg");
+    background-color: #000000bf;
     background-size: cover;
+    background-blend-mode: lighten;
+}
+
+.formBody {
+    background-color: #EBECFF;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.formBody--header {
+    height: 15%;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.formBody--header a,
+.formBody--header a .escudo {
+    height: 100%;
+}
+
+.formBody--header h1 {
+    color: #6556BB;
+    text-transform: uppercase;
+}
+
+.formBody--header button {
+    height: fit-content;
+}
+
+.formMain {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.formMain > section {
+    display: flex;
+    gap: 10px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.formMain .form {
+    width: 20%;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #CCCCCC;
+}
+
+.formMain .form input {
+    border-radius: 5px;
+    background-color: #FFEBCC;
+}
+
+.formMain .form .btnAdd {
+    width: 50%;
+    align-self: end;
+    margin-top: 20px;
+}
+
+.formMain #list {
+    width: 80%;
+    height: 100%;
+    height: 50vh;
+    background-color: #FFF;
+    border-radius: 10px;
+    border: 1px solid #CCCCCC;
+}
+
+.formMain #listButtons {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    height: 10%;
+}
+
+.formMain #listButtons button {
+    height: fit-content;
+    border-radius: 5px;
+    background-color: #FFEBCC;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    height: 5%;
+    padding: 0 30px;
 }
