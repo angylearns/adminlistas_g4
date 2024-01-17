@@ -7,7 +7,7 @@
 }
 
 .indexBody {
-    background-image: url("/img/patio-de-escuela-tecnologica-upscaled.jpg");
+    background-image: url("/img/patio-escuela.jpg");
     background-color: #000000bf;
     background-size: cover;
     background-blend-mode: lighten;
@@ -106,4 +106,14 @@ footer {
     background-color: #FFF;
     height: 5%;
     padding: 0 30px;
+}
+
+.homeTitle {
+    font-size: 8vh;
+    color: rgb(184, 126, 49);
+    text-align: center;
+    margin-top: 20px;
+}
+.homeImage {
+    height: 50vh;
 }
