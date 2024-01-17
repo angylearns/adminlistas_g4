@@ -7,7 +7,7 @@
 }
 
 .indexBody {
-    background-image: url("/img/patio-de-escuela-tecnologica-upscaled.jpg");
+    background-image: url("/img/patio-escuela.jpg");
     background-color: #000000bf;
     background-size: cover;
     background-blend-mode: lighten;
@@ -49,7 +49,7 @@
     padding: 20px;
 }
 
-.formMain > section {
+.formMain>section {
     display: flex;
     gap: 10px;
     border-radius: 10px;
@@ -107,3 +107,57 @@ footer {
     height: 5%;
     padding: 0 30px;
 }
+
+.homeTitle {
+    font-size: 8vh;
+    color: rgb(184, 126, 49);
+    text-align: center;
+    margin-top: 20px;
+}
+.homeImage {
+    height: 50vh;
+}
+
+
+@media screen and (max-width: 805px) {
+    .formMain>section {
+        flex-direction: column;
+
+    }
+
+    .formMain .form {
+        width: 60%;
+        align-self: center;
+    }
+
+    .formMain #list {
+        width: 100%;
+    }
+    
+    .formMain #listButtons {
+        flex-direction: row;
+    
+    }
+    
+    .formMain .form .btnAdd {
+        width: 35%;
+    
+    }
+    header h1{
+        text-align: left;
+       font-size: 20px;
+
+    }
+    header a,
+    header button,
+    header a img
+    {
+        width: 80px;
+        
+    }
+    header{
+        padding:0 15px 
+    }
+    }
+    
+
