@@ -6,6 +6,27 @@
     box-sizing: border-box;
 }
 
+/* Estilo de index.html */
+
+.homeTitle {
+    font-size: 8vh;
+    color: rgb(255, 255, 255);
+    text-shadow: 6px 6px 8px #111;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.homeImage {
+    height: 50vh;
+}
+
+#ppal {
+    font-size: x-large;
+}
+
+
+/* Estilo de form.html */
+
 .indexBody {
     display: flex;
     flex-direction: column;
@@ -112,26 +133,10 @@ footer {
     padding: 0 30px;
 }
 
-.homeTitle {
-    font-size: 8vh;
-    color: rgb(255, 255, 255);
-    text-shadow: 6px 6px 8px #111;
-    text-align: center;
-    margin-top: 20px;
-}
-.homeImage {
-    height: 50vh;
-}
-
-#ppal {
-    font-size: x-large;
-}
-
 
 @media screen and (max-width: 805px) {
-    .formMain>section {
+    .formMain > section {
         flex-direction: column;
-
     }
 
     .formMain .form {
@@ -145,28 +150,26 @@ footer {
     
     .formMain #listButtons {
         flex-direction: row;
-    
     }
     
     .formMain .form .btnAdd {
         width: 35%;
-    
     }
-    header h1{
-        text-align: left;
-       font-size: 20px;
 
+    header h1 {
+        text-align: left;
+        font-size: 20px;
     }
+
     header a,
     header button,
-    header a img
-    {
+    header a img {
         width: 80px;
-        
     }
-    header{
+
+    header {
         padding:0 15px 
     }
-    }
+}
     
 
