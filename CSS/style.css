@@ -7,6 +7,10 @@
 }
 
 .indexBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-image: url("/img/patio-escuela.jpg");
     background-color: #000000bf;
     background-size: cover;
@@ -110,12 +114,17 @@ footer {
 
 .homeTitle {
     font-size: 8vh;
-    color: rgb(184, 126, 49);
+    color: rgb(255, 255, 255);
+    text-shadow: 6px 6px 8px #111;
     text-align: center;
     margin-top: 20px;
 }
 .homeImage {
     height: 50vh;
+}
+
+#ppal {
+    font-size: x-large;
 }
 
 
