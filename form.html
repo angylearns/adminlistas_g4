@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Listado Escolar</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="img/escudo.svg" type="image/x-icon">
     
@@ -32,12 +32,12 @@
                     <option value="pas">PAS</option>
                 </select>
                 <label for="course">Curso</label>
-                <input type="text" name="" id="course">
+                <input type="text" name="" id="course" disabled>
                 <label for="email">E-mail</label>
                 <input type="text" name="" id="email">
                 <label for="class">Clase</label>
-                <input type="text" name="" id="class">
-                <button onclick="addText()" class="btnAdd">Enviar</button>
+                <input type="text" name="" id="class" disabled>
+                <button onclick="getInfoCreateObject()" class="btnAdd">Enviar</button>
             </section>
 
             <section id="list">
@@ -46,8 +46,8 @@
         </section>
 
         <section id="listButtons">
-            <button>Cargar lista</button>
-            <button>Guardar lista</button>
+            <button onclick="addAlertInfo()">Cargar lista</button>
+            <button onclick="savedList()"> Guardar lista</button>
         </section>
     </main>
 
