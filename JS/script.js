@@ -59,14 +59,42 @@ function getInfoCreateObject() {
     let eachCourse = document.querySelector("#course").value;
     let eachMail = document.querySelector("#email").value;
     let eachClass = document.querySelector("#class").value;
-    // agregamos todo eso al objeto
-    let person = new Person(eachName, eachLastName1, eachLastName2, eachCategory, eachCourse, eachMail, eachClass);
-    // agregamos person al array people (previamente inicializado sin contenido)
-    people.push(person);
-    // Mostramos el array por consola para comprobar que funciona
-    console.log(people);
-    // llamamos a la función appendSection() mandándole como parámetro el array people, que ya sí tiene datos dentro
-    appendSection(people);
+        
+    // nos cercioramos de que todos los campos estén rellenos antes de seguir
+    let chosenCategory = document.querySelector("#category").value;
+    if (chosenCategory === "estudiante") {
+        if (!eachName || !eachLastName1 || !eachLastName2 || !eachCategory || !eachCourse || !eachMail || !eachClass) {
+        alert('Todos los campos son obligatorios');
+        return; 
+        } else {
+            // agregamos todo eso al objeto
+            let person = new Person(eachName, eachLastName1, eachLastName2, eachCategory, eachCourse, eachMail, eachClass);
+            // agregamos person al array people (previamente inicializado sin contenido)
+            people.push(person);
+            // Mostramos el array por consola para comprobar que funciona
+            console.log(people);
+            // llamamos a la función appendSection() mandándole como parámetro el array people, que ya sí tiene datos dentro
+            appendSection(people);
+            showAlert();
+            limpiarCampos();
+        }
+    } else if (chosenCategory === "docente" || chosenCategory === "pas" || chosenCategory === "") {
+        if (!eachName || !eachLastName1 || !eachLastName2 || !eachCategory || !eachMail ) {
+        alert('Todos los campos son obligatorios');
+        return; 
+        } else {
+            // agregamos todo eso al objeto
+            let person = new Person(eachName, eachLastName1, eachLastName2, eachCategory, eachCourse = "No aplica", eachMail, eachClass = "No aplica");
+            // agregamos person al array people (previamente inicializado sin contenido)
+            people.push(person);
+            // Mostramos el array por consola para comprobar que funciona
+            console.log(people);
+            // llamamos a la función appendSection() mandándole como parámetro el array people, que ya sí tiene datos dentro
+            appendSection(people);
+            showAlert();
+            limpiarCampos();
+        }
+    }
 }
 function appendSection(arrayPeople) {
     arrayPeople.forEach(function(eachObject) {
