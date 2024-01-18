@@ -87,8 +87,8 @@ function appendSection(arrayPeople) {
             createdSection.append(par);
         }
      });
-}
-function appendSection(arrayPeople) {
+
+
     // Obtener la lista
     let list = document.querySelector("#list");
     // Limpiar la lista antes de agregar nuevos elementos
