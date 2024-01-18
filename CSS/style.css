@@ -8,6 +8,17 @@
 
 /* Estilo de index.html */
 
+.indexBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/img/patio-escuela.jpg");
+    background-color: #000000bf;
+    background-size: cover;
+    background-blend-mode: lighten;
+}
+
 .homeTitle {
     font-size: 8vh;
     color: rgb(255, 255, 255);
@@ -54,24 +65,8 @@
 }
 
 
-
-
-
-
-
-
 /* Estilo de form.html */
 
-.indexBody {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url("/img/patio-escuela.jpg");
-    background-color: #000000bf;
-    background-size: cover;
-    background-blend-mode: lighten;
-}
 
 .formBody {
     background-color: #EBECFF;
