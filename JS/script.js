@@ -126,7 +126,7 @@ function appendSection(arrayPeople) {
 }
 // Función para editar un campo específico de un objeto en la lista
 function editField(person, field) {
-    let newValue = prompt(`Editar ${field}:`, person[field]);
+    let newValue = prompt(`Editar:`, person[field]);
     if (newValue !== null) {
         person[field] = newValue;
         // Volver a mostrar la lista después de la edición
@@ -135,7 +135,7 @@ function editField(person, field) {
 }
 // Función para eliminar un campo específico de un objeto en la lista
 function deleteField(person, field) {
-    let confirmation = confirm(`¿Estás seguro de eliminar el campo ${field} de este elemento?`);
+    let confirmation = confirm(`¿Estás seguro de eliminar?`);
     if (confirmation) {
         // Eliminar el campo del objeto
         delete person[field];
