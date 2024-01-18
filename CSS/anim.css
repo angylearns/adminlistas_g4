@@ -1,0 +1,21 @@
+/* https://www.animotion.dev */
+
+.heart-beat {
+    transform-origin: 50% 50%;
+    animation: heart-beat-animation 1.3s ease-out 0s 1 normal both running;
+}
+
+@keyframes heart-beat-animation {
+
+    0%,
+    28%,
+    70%,
+    100% {
+        transform: scale(1);
+    }
+
+    14%,
+    42% {
+        transform: scale(1.3);
+    }
+}
