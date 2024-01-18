@@ -42,6 +42,20 @@ function Person(nom, ap1, ap2, cat, cur, mail, clase){
     this.clas = clase;
 }
 
+function limpiarCampos() {
+    document.querySelector("#name").value = "";
+    document.querySelector("#lasName1").value ="" ;
+    document.querySelector("#lastName2").value = "";
+    document.querySelector("#category").value = "";
+    document.querySelector("#course").value = "";
+    document.querySelector("#email").value = "";
+    document.querySelector("#class").value = "";
+}
+
+function mostrarAviso(){
+    alert("Datos enviados correctamente");
+}
+
 function getInfoCreateObject() {
     let eachName = document.querySelector("#name").value;
     let eachLastName1 = document.querySelector("#lastName1").value;
@@ -62,8 +76,9 @@ function getInfoCreateObject() {
     appendSection(people);
 
 
-    // AQUÍ TENEMOS QUE LLAMAR TAMBIÉN A LA FUNCIÓN DE LIMPIAR CAMPOS
+    limpiarCampos()
 }
+
 
 function appendSection(arrayPeople) {
 
