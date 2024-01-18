@@ -1,3 +1,9 @@
+// Esto en HTML ↓ ....
+// <button onclick="getInfoCreateObject()" class="btnAdd">Enviar</button>
+// ... es igual a esto en JS ↓
+//document.querySelector(".btnAdd").addEventListener("click", getInfoCreateObject)
+
+
 let iCourse = document.querySelector("#course");
 let iClass = document.querySelector("#class");
 
@@ -60,8 +66,7 @@ function getInfoCreateObject() {
 }
 
 function appendSection(arrayPeople) {
-    
-    // recorremos el arrayPeople y en cada iteración creamos una función anónima (porque no tiene nombre) a la que le mandamos un parámetro eachObject que lo saca el propio forEach (porque al iterar, nos devuelve cada objecto que está dentro del array)
+
     arrayPeople.forEach(function(eachObject) {
         // crear la section
         let createdSection = document.createElement("section");
@@ -72,35 +77,19 @@ function appendSection(arrayPeople) {
         createdSection.classList.add("listRecords");
         // averiguamos el largo del objeto para luego iterar sobre ese número
         let objectLength = Object.entries(eachObject).length;
-        console.log("Largo objecto " + objectLength);
+        console.log("Largo objecto antes de agregar párrafos: " + objectLength);
         // crear los 7 párrafos
-        let paragraphs = [];
-        for (let i = 0; i < objectLength; i++) {
+
+        for (const [key, value] of Object.entries(eachObject)) {
             let par = document.createElement("p");
-            par.classList.add("p" + i)
-            paragraphs[i] = par;
+            par.textContent = value;
+            createdSection.append(par);
         }
-        // append los párrafos a la section
-        for (let i = 0; i < paragraphs.length; i++) {
-            createdSection.append(paragraphs[i]); 
-        }
+     });
 
         
-        // recorremos el objeto person que previamente habíamos creado en la función getInfoCreateObject()
-        for (const [key, value] of Object.entries(eachObject)) {
-            console.log("ACÁÁÁ-A-");
-            console.log(`${key}: ${value}`);
-            console.log(value);
-            // -------------- SEGUIR POR ACÁ --------------
-            // Preguntar: ¿Cómo puedo recorrer los childNodes de .listRecords para que en cada iteración le agregue un value (ej.: iteración 1 → childNode[0] y el value del primer registro del objecto, y así sucesivamente)
-            
-            for (let i = 0; i < Object.entries(eachObject).length; i++) {
-                console.log(value);
-                document.querySelector(".listRecords").childNodes[i].textContent = `${value}`;
-            }
-        }
-        
-       });
+
+
 
 }
 
