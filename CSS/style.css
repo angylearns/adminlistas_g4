@@ -217,4 +217,12 @@ footer {
     margin: 20px;
      gap: 20px;
 
+
+}
+.listRecords button{
+    background-color: #FFEBCC;
+    width: 25px;
+    border-radius: 10px;
+    gap: 10px;
+    margin:1px;
 }
