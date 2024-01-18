@@ -52,8 +52,16 @@ function limpiarCampos() {
     document.querySelector("#class").value = "";
 }
 
-function mostrarAviso(){
+function showAlert(){
     alert("Datos enviados correctamente");
+}
+
+function addAlertInfo(){
+    alert("Lista cargada correctamente");
+}
+
+function savedList(){
+    alert("Lista guardada correctamente");
 }
 
 function getInfoCreateObject() {

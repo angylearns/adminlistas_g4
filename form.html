@@ -37,7 +37,7 @@
                 <input type="text" name="" id="email">
                 <label for="class">Clase</label>
                 <input type="text" name="" id="class" disabled>
-                <button onclick="getInfoCreateObject(), limpiarCampos(), mostrarAviso()" class="btnAdd">Enviar</button>
+                <button onclick="getInfoCreateObject(), limpiarCampos(), showAlert()" class="btnAdd">Enviar</button>
             </section>
 
             <section id="list">
@@ -46,8 +46,8 @@
         </section>
 
         <section id="listButtons">
-            <button>Cargar lista</button>
-            <button>Guardar lista</button>
+            <button onclick="addAlertInfo()">Cargar lista</button>
+            <button onclick="savedList()"> Guardar lista</button>
         </section>
     </main>
 
