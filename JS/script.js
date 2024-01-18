@@ -44,7 +44,7 @@ function Person(nom, ap1, ap2, cat, cur, mail, clase){
 
 function limpiarCampos() {
     document.querySelector("#name").value = "";
-    document.querySelector("#lasName1").value ="" ;
+    document.querySelector("#lastName1").value = "";
     document.querySelector("#lastName2").value = "";
     document.querySelector("#category").value = "";
     document.querySelector("#course").value = "";
@@ -76,7 +76,7 @@ function getInfoCreateObject() {
     appendSection(people);
 
 
-    limpiarCampos()
+    
 }
 
 
