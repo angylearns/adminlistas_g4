@@ -16,7 +16,7 @@ Este proyecto es el segundo trabajo (01/2024) del Bootcamp Full Stack Fem Coders
 
 ## Estado del Proyecto
 
-El proyecto está en fase de desarrollo.
+El proyecto está en fase de producción.
 
 ## Tecnologías Utilizadas
 
