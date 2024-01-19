@@ -86,7 +86,7 @@ function getInfoCreateObject() {
 
         if (!eachName || !eachLastName1 || !eachLastName2 || !eachCategory || !eachCourse || !eachMail || !eachClass) {
             
-            alert('Todos los campos son obligatorios');
+            alert('ERROR: Todos los campos son obligatorios');
             return;
 
         } else {
@@ -103,7 +103,7 @@ function getInfoCreateObject() {
 
         if (!eachName || !eachLastName1 || !eachLastName2 || !eachCategory || !eachMail) {
 
-            alert('Todos los campos son obligatorios');
+            alert('ERROR: Todos los campos son obligatorios');
             return;
 
         } else {
