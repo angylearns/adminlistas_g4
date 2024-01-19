@@ -1,4 +1,4 @@
-# Aplicación de Administración de Listas del cole
+# Aplicación para Administración de Listas del cole
 ## Grupo 4
 
 ## Descripción
