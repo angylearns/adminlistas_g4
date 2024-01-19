@@ -67,7 +67,7 @@ function savedList() {
     alert(`Lista "${listName}" guardada correctamente`);
 }
 
-
+ 
 let people = [];
 
 function getInfoCreateObject() {
