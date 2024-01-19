@@ -32,9 +32,9 @@
                     <option value="pas">PAS</option>
                 </select>
                 <label for="course">Curso</label>
-                <input type="text" name="" id="course" disabled>
+                <input type="number" name="" id="course" min="0" max="10" pattern="\d{2}" maxlength="2" title="Escribe un número" placeholder="Ej.: 3" disabled>
                 <label for="email">E-mail</label>
-                <input type="text" name="" id="email">
+                <input type="email" name="" id="email" placeholder="Ej.: hola@hola.com">
                 <label for="class">Clase</label>
                 <input type="text" name="" id="class" disabled>
                 <button onclick="getInfoCreateObject()" class="btnAdd">Enviar</button>
