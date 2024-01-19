@@ -63,7 +63,8 @@ function addAlertInfo() {
 
 
 function savedList() {
-    alert("Lista guardada correctamente");
+    let listName = prompt("Introduzca nombre de lista");
+    alert(`Lista "${listName}" guardada correctamente`);
 }
 
 
