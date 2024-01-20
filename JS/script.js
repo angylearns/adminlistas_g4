@@ -203,17 +203,18 @@ function appendSection(arrayPeople) {
                 editField(eachObject, key);
             });
 
-            let deleteButton = document.createElement("button");
-            deleteButton.innerHTML = "&#128465;";
-
-            deleteButton.addEventListener("click", function () {
-                deleteField(eachObject, key);
-            });
-
-            par.append(editButton, deleteButton);
+            par.append(editButton);
             createdSection.append(par);
         }
 
+        let deleteButton = document.createElement("button");
+        deleteButton.innerHTML = "&#128465;";
+
+        deleteButton.addEventListener("click", function () {
+            deleteField(eachObject);
+        });
+
+        createdSection.appendChild(deleteButton);
         list.append(createdSection);
     });
 }
@@ -231,13 +232,26 @@ function editField(person, field) {
 }
 
 
-function deleteField(person, field) {
+function deleteField(objeto) {
+
+    console.dir(objeto);
+    let nameObject = objeto["name"];
+    let surname1 = objeto["last1"];
+    let surname2 = objeto["last2"];
+    let email = objeto["email"];
+
+    let foundIndex;
+
+    people.forEach(function (person, index) {
+        if (person.name === nameObject && person.last1 === surname1 && person.last2 === surname2 && person.email === email) {
+            foundIndex = index;
+        }
+    });
 
     let confirmation = confirm(`¿Estás seguro/a de eliminar?`);
 
     if (confirmation) {
-        delete person[field];
-
+        people.splice(foundIndex, 1);
         appendSection(people);
-    }
+    }    
 }
