@@ -44,7 +44,7 @@ document.querySelector("#category").addEventListener("change", function () {
 
     // (2) ...si else, o sea, si no se cumple la condición del if (que choseCategory sea exactamente igual a "estudiante")... (2.1)
     } else {
-        // (2.1) ...mantiene el disable de los inputs de curso y de clase en true (o sea, los mantiene deshabilitados) y el color de fondo es el mismo gricesito del comienzo (líneas MARICA). 
+        // (2.1) ...mantiene el disable de los inputs de curso y de clase en true (o sea, los mantiene deshabilitados) y el color de fondo es el mismo gricesito del comienzo (líneas 29 y 30). 
         iCourse.disabled = true;
         iClass.disabled = true;
         iCourse.style.backgroundColor = "#A5A5A5";
@@ -52,7 +52,7 @@ document.querySelector("#category").addEventListener("change", function () {
     }
 });
 
-// Acá creamos un constructor de objetos. En este caso, el objeto se va a llamar Person, y va a tener 7 parámetros a los que tendemos que asignarle un argumento cuando creemos cada objeto Person usando este constructor (en la línea ACÁ, MARICA, CAMBIA)... (3)
+// Acá creamos un constructor de objetos. En este caso, el objeto se va a llamar Person, y va a tener 7 parámetros a los que tenemos que asignarles sus respectivo argumentos cuando creemos cada objeto Person usando este constructor... (3)
 function Person(nom, ap1, ap2, cat, cur, mail, clase) {
     // ... (3) en ORDEN, cada uno de los parámetros que van entre paréntesis se lo asignamos a una propiedad (name, last1, last2, category, etc...). El this se refiere al objeto que está siendo construido. Como este es un CONSTRUCTOR, es como la plantilla de creación de un objeto y todavía no tiene nombre, por tanto usamos la palabra reservada "this" para referirnos a que, en un futuro, ese espacio de "this" lo ocupará el nombre del objeto que creemos gracias a este constructor.
     this.name = nom;
@@ -125,11 +125,11 @@ function getInfoCreateObject() {
             return;
             // Nota: Esto de Sí ser o NO ser es porque cuando una variable está vacía es false y cuando tiene contenido es true. Por tanto, en este caso, estamos comprobando que ninguna de las variables sea false, o sea, que ninguna esté vacía. El signo de exclamación hacia abajo es el operador lógico NOT. Ponerlo delante de algo niega ese algo. En estos casos, si niega una variable, el resultado sería false. ¿Qué es, entonces, que una variable sea false? Que está vacía. Por eso, en este if estamos comprobando que ninguna de la variables esté vacía con las barritas "||", que son el operador lógico OR. 
 
-        // (7.2) ...si else, o sea, si NO se cumple la condición de la línea MARICA, por tanto, cada una de esas variables SÍ es (SÍ tienen contenido...) ... (7.2.2)
+        // (7.2) ...si else, o sea, si NO se cumple la condición de la línea 122, por tanto, si cada una de esas variables SÍ es (o sea, SÍ tienen contenido...) ... (7.2.2)
         } else {
             // (7.2.2) ...se crea un objeto Person al que llamamos "person" y le mandamos como argumentos las variables previamente creadas que equivalen a los valores/value de los inputs.
             let person = new Person(eachName, eachLastName1, eachLastName2, eachCategory, eachCourse, eachMail, eachClass);
-            //  (7.2.2) ...agregamos el objeto person al array people (el que en la línea MARICA inicializamos vacío).
+            //  (7.2.2) ...agregamos el objeto person al array people (el que en la línea 102 inicializamos vacío).
             people.push(person);
             // (7.2.2) ...y llamamos a las siguientes funciones. Además, a la función appendSection(), que requiere de un parémtros para funcionar, le mandamos el array people como argumento.
             appendSection(people);
@@ -150,11 +150,11 @@ function getInfoCreateObject() {
             // (7.3.1) ...se sale de la condición. ¿Qué pasa si se sale de la condición? Que se evalúa de nuevo y si las variables siguen NO siendo, pues volverá a entrar en esta condición y se volverá a lanzar el mensaje de error.
             return;
 
-        // (7.3) ...si else, en este caso, si no se cumple la condición de la línea MARICA (por tanto, las variables SÍ son)... (7.3.2)
+        // (7.3) ...si else, en este caso, si no se cumple la condición de la línea 145 (por tanto, las variables SÍ son)... (7.3.2)
         } else {
             // (7.3.2) ...se crea un objeto Person al que llamamos "person" y le mandamos como argumentos las variables previamente creadas que equivalen a los valores/value de los inputs.
             let person = new Person(eachName, eachLastName1, eachLastName2, eachCategory, eachCourse = "No aplica", eachMail, eachClass = "No aplica");
-            // (7.3.2) ...agregamos el objeto person al array people (el que en la línea MARICA inicializamos vacío).
+            // (7.3.2) ...agregamos el objeto person al array people (el que en la línea 102 inicializamos vacío).
             people.push(person);
             // (7.3.2) ...y llamamos a las siguientes funciones. Además, a la función appendSection(), que requiere de un parémtros para funcionar, le mandamos el array people como argumento.
             appendSection(people);
@@ -164,7 +164,7 @@ function getInfoCreateObject() {
     }
 }
 
-// Creamos la función appendSection(), que requiere un parámetro que llamaremos "arrayPeople" para manejarlo dentro de la función. En este caso, se llama asi porque le vamos a mandar el array people como argumento y lo quisimos llamar así para darle más claridad al código. No siempre se tiene que llamar de esta manera, pues en otros códigos que hagamos no solamente se mandaría como argumento el array de nombre people. (8)
+// Creamos la función appendSection(), que requiere un parámetro que llamaremos "arrayPeople" para manejarlo dentro de la función. En este caso, se llama asi porque le vamos a mandar el array people como argumento y lo quisimos llamar así para darle más claridad al código. No siempre se tiene que llamar de esta manera, pues en otros códigos que hagamos no solamente se mandaría como argumento el array de nombre people. (8) [CONTINUARÁ]
 function appendSection(arrayPeople) {
 
     arrayPeople.forEach(function (eachObject) {
