@@ -12,7 +12,7 @@ Explicación addEventListener:
 
 
 /* 
-EXPLICACIÓN DE LAS NOTAS QUE VOY A PONER:
+EXPLICACIÓN DE LAS NOTAS QUE VAMOS A PONER:
     Los puntos suspensivos (...) significan que la explicación sigue...
     ...y el número que pondré entre paréntesis delante o detrás de esos puntos suspensivos significan frases conectadas. Ejemplo: ... (1) - (1) ... significa que esas frases están conectadas y que la segunda es la continuación de la primera.
 */
