@@ -7,14 +7,14 @@ Explicación addEventListener:
 
     Es como agregarle a un elemento un espía que está pendiente de cada cosa que pase y, cuando pasa lo que queremos que pase para que se active nuestra función (en este caso, es un click), pues nuestra función (en este caso, miFuncioncita()) se activa.
     
-    P.D.: tanto .botonCreado como miFuncioncita() no existen en este archivo; las invité para este ejemplo.
+    P.D.: tanto .botonCreado como miFuncioncita() no existen en este archivo; las inventamos para este ejemplo.
 */
 
 
 /* 
 EXPLICACIÓN DE LAS NOTAS QUE VAMOS A PONER:
     Los puntos suspensivos (...) significan que la explicación sigue...
-    ...y el número que pondré entre paréntesis delante o detrás de esos puntos suspensivos significan frases conectadas. Ejemplo: ... (1) - (1) ... significa que esas frases están conectadas y que la segunda es la continuación de la primera.
+    ...y el número entre paréntesis delante o detrás de esos puntos suspensivos significa frases conectadas. Ejemplo: ... (1) - (1) ... significa que esas frases están conectadas y que la segunda es la continuación de la primera.
 */
 
 
@@ -34,17 +34,17 @@ if (iCourse.disabled && iClass.disabled) {
 document.querySelector("#category").addEventListener("change", function () {
     // (2) ...conseguimos con el DOM el valor/value del elemento de id "category" y lo metermos en la variable chosenCategory.
     let chosenCategory = document.querySelector("#category").value;
-    // (2) ...si el valor/value guardado en choseCategory es COMPLETAMENTE IGUAL TANTO EN CONTENIDO COMO EN TIPO DE DATO (tres iguales "===") a "estudiante"...
+    // (2) ...si el valor/value guardado en choseCategory es COMPLETAMENTE IGUAL TANTO EN CONTENIDO COMO EN TIPO DE DATO (tres iguales "===") a "estudiante"... (2.1)
     if (chosenCategory === "estudiante") {
-        // (2) ...cambia el disabled de los inputs de curso y de clase a false (o sea, los activa) y les cambie el colorcito de fondo.
+        // (2.1) ...cambia el disabled de los inputs de curso y de clase a false (o sea, los activa) y les cambie el colorcito de fondo.
         iCourse.disabled = false;
         iClass.disabled = false;
         iCourse.style.backgroundColor = "#FFEBCC";
         iClass.style.backgroundColor = "#FFEBCC";
 
-    // (2) ...si else, o sea, si no se cumple la condición del if (que choseCategory sea exactamente igual a "estudiante")... (2.1)
+    // (2) ...si else, o sea, si no se cumple la condición del if (que choseCategory sea exactamente igual a "estudiante")... (2.2)
     } else {
-        // (2.1) ...mantiene el disable de los inputs de curso y de clase en true (o sea, los mantiene deshabilitados) y el color de fondo es el mismo gricesito del comienzo (líneas 29 y 30). 
+        // (2.2) ...mantiene el disable de los inputs de curso y de clase en true (o sea, los mantiene deshabilitados) y el color de fondo es el mismo gricesito del comienzo (líneas 29 y 30). 
         iCourse.disabled = true;
         iClass.disabled = true;
         iCourse.style.backgroundColor = "#A5A5A5";
@@ -64,7 +64,7 @@ function Person(nom, ap1, ap2, cat, cur, mail, clase) {
     this.clas = clase;
 }
 
-// Creamos la función cleanFields()... (4) //
+// Creamos la función cleanFields()... (4)
 function cleanFields() {
     // (4) ...que lo que hace es coger el valor de cada elemento de estos ids (name, lastName1, lastName2, etc..) y vaciarlo. Estos elementos son los valores/value de los inputs.
     document.querySelector("#name").value = "";
@@ -101,7 +101,7 @@ function savedList() {
 // Incializamos un array de nombre "people" vacío.
 let people = [];
 
-// Creamos la función getInfoCreateObjet() que lo que va a hacer, como si nombre indica, es conseguir información y crear un objeto... (7)
+// Creamos la función getInfoCreateObjet() que lo que va a hacer, como su nombre indica, es conseguir información y crear un objeto: ... (7)
 function getInfoCreateObject() {
     // (7) ...conseguimos con el DOM el valor/value del elemento de id "category" y lo metermos en la variable chosenCategory.
     let chosenCategory = document.querySelector("#category").value;
@@ -137,8 +137,8 @@ function getInfoCreateObject() {
             cleanFields();
             /* 
             NOTA: Recordemos que la DIFERENCIA entre PARÁMETRO y ARGUMENTO es:
-                • Parámetro: variable que se define en la declaración de la función y que se utiliza para recibir datos de entrada cuando se llama a la función. Los parámetros son parte de la definición de la función y se especifican en la lista de parámetros de la función. Por ejemplo, en la función suma(a, b), a y b son parámetros.
-                • Argumento: valor específico que se pasa a la función cuando se llama. Los argumentos son los datos reales que se utilizan para ejecutar la función. Cuando se llama a la función suma(a, b), los valores que se pasan a la función son los argumentos. Por ejemplo, si llamamos a la función suma(5, 3), entonces 5 y 3 son los argumentos.
+                • PARÁMETRO: variable que se define en la declaración de la función y que se utiliza para recibir datos de entrada cuando se llama a la función. Los parámetros son parte de la definición de la función y se especifican en la lista de parámetros de la función. Por ejemplo, en la función suma(a, b), a y b son parámetros.
+                • ARGUMENTO: valor específico que se pasa a la función cuando se llama. Los argumentos son los datos reales que se utilizan para ejecutar la función. Cuando se llama a la función suma(a, b), los valores que se pasan a la función son los argumentos. Por ejemplo, si llamamos a la función suma(5, 3), entonces 5 y 3 son los argumentos.
             */
         }
     // (7.1) ...o si chosenCategory es COMPLETAMENTE IGUAL TANTO EN CONTENIDO COMO EN TIPO DE DATO (tres iguales "===") a "docente" o COMPLETAMENTE IGUAL TANTO EN CONTENIDO COMO EN TIPO DE DATO (tres iguales "===") a "pas" o COMPLETAMENTE IGUAL TANTO EN CONTENIDO COMO EN TIPO DE DATO (tres iguales "===") a vacío ("")... (7.3)
@@ -164,23 +164,18 @@ function getInfoCreateObject() {
     }
 }
 
+const fieldLabels = {
+    "name": "Nombre",
+    "last1": "1er Apellido",
+    "last2": "2º Apellido",
+    "category": "Categoría",
+    "course": "Curso",
+    "email": "E-mail",
+    "clas": "Clase"
+};
+
 // Creamos la función appendSection(), que requiere un parámetro que llamaremos "arrayPeople" para manejarlo dentro de la función. En este caso, se llama asi porque le vamos a mandar el array people como argumento y lo quisimos llamar así para darle más claridad al código. No siempre se tiene que llamar de esta manera, pues en otros códigos que hagamos no solamente se mandaría como argumento el array de nombre people. (8) [CONTINUARÁ]
 function appendSection(arrayPeople) {
-
-    arrayPeople.forEach(function (eachObject) {
-
-        let createdSection = document.createElement("section");
-        let list = document.querySelector("#list");
-        list.append(createdSection);
-        createdSection.classList.add("listRecords");
-
-        for (const [key, value] of Object.entries(eachObject)) {
-            
-            let par = document.createElement("p");
-            par.textContent = value;
-            createdSection.append(par);
-        }
-    });
 
     let list = document.querySelector("#list");
 
@@ -194,7 +189,8 @@ function appendSection(arrayPeople) {
         for (const [key, value] of Object.entries(eachObject)) {
 
             let par = document.createElement("p");
-            par.textContent = `${value}`;
+            par.textContent = `${fieldLabels[key] || key}: ${value}`;
+            createdSection.append(par);
 
             let editButton = document.createElement("button");
             editButton.innerHTML = "&#9998;";
@@ -208,6 +204,7 @@ function appendSection(arrayPeople) {
         }
 
         let deleteButton = document.createElement("button");
+        deleteButton.classList.add("buttonThatDeletes");
         deleteButton.innerHTML = "&#128465;";
 
         deleteButton.addEventListener("click", function () {
